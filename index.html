@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+	<head>
+    <link rel="stylesheet" href="https://hungry-shockley-fa3e3f.netlify.app/css/styles.css">    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<body>
+    <div class="principio"><h1> GAMBETA TOTAL +</h1></div>
+                    <!--Slider principal-->
+    <center class="eric">
+                    
+                <div class = "slider">
+                    
+                        <a href="go:Champions" >
+                    <div class ="slide" id = "slide1"></div></a>
+                    
+                        <a href="go:Champions" >
+                    <div class ="slide" id = "slide2"></div></a>
+        
+                    <a href="go:Laligasant" >
+                    <div class ="slide" id = "slide3"></div></a>
+
+                    <!--<a href="go:monster" >
+                    <div class ="slide" id = "slide4"></div></a>
+        
+                        <a href="go:loki" >
+                    <div class ="slide" id = "slide5"></div></a>-->
+
+
+                </div>    
+    </center>
+    <div style="margin-bottom: 20px;">
+    </div>
+   
+    <a class="prev" onclick="thisImage(-1)">❮</a>
+	<a class="next" onclick="thisImage(1)">❯</a> -->
+    <script>
+        let autoSlide;
+        window.onload = function(){
+            autoSlide= setInterval(function(){
+                thisImage(1);
+            },4000);
+        
+            thisImage(0);
+        };
+        
+        var currentImage=0;
+        
+        
+        function thisImage(val){
+        
+            clearInterval(autoSlide);
+            
+            
+            currentImage+=val;
+        
+            if(currentImage > document.getElementsByClassName("slide").length - 1 && val == "1") currentImage=0;
+        
+            if(currentImage < 0 && val == "-1") currentImage=document.getElementsByClassName("slide").length - 1;
+        
+        
+            for(leftImg = 0; leftImg <= currentImage; leftImg++){
+        
+                document.getElementsByClassName("slide")[leftImg].style.left="-100vw";
+                document.getElementsByClassName("slide")[leftImg].style.transform = "scale(0)";
+            }
+        
+            for(rightImg = currentImage+1; rightImg < document.getElementsByClassName("slide").length; rightImg++){
+            
+                document.getElementsByClassName("slide")[rightImg].style.left="100vw";
+                document.getElementsByClassName("slide")[rightImg].style.transform = "scale(0)";
+            }
+        
+            document.getElementsByClassName("slide")[currentImage].style.left="0";
+            document.getElementsByClassName("slide")[currentImage].style.transform = "scale(1)";
+        
+            autoSlide= setInterval(function(){
+                thisImage(1);
+            },4000);
+        }
+        
+                setTimeout(function() {
+                  document.getElementById('imageID').style.display='none'
+                }, 3*1000);
+        
+        </script>
+<style>
+    .slider {
+	width: 91vw; height: 35vh;
+	overflow:hidden;
+	position:relative;
+	margin-top:50px
+	top:10.5vh;
+	left:0;
+}
+.slide {
+	width: 100%; height: 100%;
+	transition:left 0.75s, transform 0.75s;
+	position:absolute;
+	left:0; top:0;
+	transition-timing-function:ease-out;
+	border-radius:2vmin;
+	text-align:center;
+	color: black;
+	font-weight:bold;
+	font-style:italic;
+	text-shadow:-1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black, 1px 1px 1px black;
+    
+}
+#slide1 {
+	background:url("https://blogger.googleusercontent.com/img/a/AVvXsEiSfTq3HqwjxK_ML9rYstmSIsPsXiU28L5_EqKz_Rj54zChSvN_2RVs4m3GS3BfSkRnZpz4iXIWIlMnPiy_998e21-z_4uf6mC1fdy0Q8uiRhKqrI-g6SCt_HgsApxt2iZdKHov7SjRqCDvU6puOsEA6RqFztxd6bx79h8_dJOfEj4wBjoTUvGJVlGt=s320");
+	background-size:cover;
+	background-position:center;
+}
+#slide2 {
+	background:url("https://blogger.googleusercontent.com/img/a/AVvXsEi-n-rZZUu0bM_dsGyPTd71hYsvCz_Rxr5cG3Y5LzT-Mt5134UMHYoKq092sGYk6Jx9xlVsSg6i8z8D5qamrUyn-5VbQ3akFFWY3bRUhrBn3ZI4yGrplOkqzQ6bH7LF9DLb-sOXaSgboB3pW8sDdjzYszXEaj8CnRXKNvEtIR5wqv19wE2yivd7bpnz=s320");
+	background-size:cover;
+	background-position:center;
+}
+#slide3 {
+	background:url("https://blogger.googleusercontent.com/img/a/AVvXsEhgUsNdcma_FwD_elasrTATCON9DqQPD1sMAvZK_cpFYqbE32aUVFvHEZfskWbFy23L_Bzpt2vrZTaS6OkHS2H8LIzTfgMEne4B7MfOJJA9Ech4Hj1KqErTBiMaOCNLnFSWxFJqrtwsXDR1KJ_j2JMMpG8KUb-117xOouWVzj1fMVZgnUsYQbeV31RJ=s320");
+	background-size:cover;
+	background-position:center;
+}
+#slide4 {
+	background:url("#");
+	background-size:cover;
+	background-position:center;
+}
+#slide5 {
+	background:url("#");
+	background-size:cover;
+	background-position:center;
+}
+/*Buttons*/
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+	width: auto;
+	margin-top: 0px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	z-index:2;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0);
+    
+}
+</style>
+
+        
+   
+ <p class="partido">Miercoles 22 de ocutubre 15hrs</p>            
+ <div class="proximos">
+    <div class="elementos contendor_imagen"><img class="imagenes1" src="iMAGENES/manchester-city-fc-logo-escudo-badge.png" ></div>
+    <div class="elementos letras"><p class="partido">Manchester VS Barcelona</p> </div>
+    <div class="elementos contendor_imagen"><img class="imagenes1" src="iMAGENES/584a9b3bb080d7616d298777.png" > </div>
+    <div class="elementos"><a class="icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="56" height="56" viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <line x1="13" y1="18" x2="19" y2="12" />
+        <line x1="13" y1="6" x2="19" y2="12" />
+      </svg></a> </div>
+    </div>
+ 
+    
+</body>
+<!--
+<nav class="nav">
+    <a class="BARRA" href="http://action_search">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="3" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7" ></circle>
+        <line x1="21" y1="21" x2="15" y2="15" ></line>
+      </svg></a>
+    
+        <a class="BARRA" href="go:home"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="5 12 3 12 12 3 21 12 19 12" ></polyline>
+        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" ></path>
+        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" ></path>
+      </svg></a>
+      
+  </nav>
+
+
