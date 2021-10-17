@@ -1,0 +1,214 @@
+* {
+    background-color: black;
+	font-family: 'Bebas Neue', cursive;
+}
+html{
+    margin: 0 0 0 0;
+}
+
+h2{ 
+    color: #fff; 
+    font-family: Arial, Helvetica, sans-serif; 
+    border-radius:5px; 
+    margin-bottom:10px; 
+}
+h1 {
+    color: #fff;
+    margin-bottom:40px;
+    text-align:center;
+    font-weight: bold;
+	font-size:30px;
+    
+}
+.container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+	box-shadow: 0 0 2px #131419;
+	background-color: black;
+	display: flex;
+    justify-content: center;
+	overflow-x: auto;
+    margin-bottom: 0px;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 13px;
+	color: #cccccc;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #121212;
+}
+
+.nav__link--active {
+	color: #fff;
+}
+
+.nav__icon {
+	font-size: 32px;
+	height: 50px	
+}
+#imageID{
+    max-width:100%;
+	height: 100%;
+	z-index: 9999;
+	position:fixed; 
+	top:0; 
+	left:0;
+}
+
+svg{
+    text-align: center;
+    margin: 0px 0 0 0;
+}
+.modal-container img{
+ z-index: 1;
+}
+.modal-container{
+	width: 280PX;
+	height: 380PX;
+	display: flex;
+	justify-content: space-between;
+}
+.modal-container::after{
+	content:"1";
+	width: 280PX;
+	height: 380PX;
+	left: 0;
+	right: 0;
+	background-color:rgba(0,0,0,0.56);
+	z-index:0;
+}
+.todo {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.series {
+    margin: 2px 2px 2px 2px;
+	
+}
+
+.BARRA {
+    margin-right: 30px;
+}
+.icon {
+	background-color: transparent;
+	margin-right: 0;
+}
+.contenedor_imagen{
+	width: 100%;
+}
+.imagenes1{
+	height: 50px;
+	width:50px;
+	background-color: transparent;
+	margin-top:5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.proximos {
+background: linear-gradient(to right, yellowgreen, rgb(255, 10, 10));
+ width: 100%;
+ border-radius: 10px;
+ display: flex;
+ justify-content: space-between;
+ 
+}
+.letras{
+	width: 50%;
+	margin: 0;
+}
+.elementos{
+	display: flex;
+	justify-content: center;
+	background-color: transparent;
+}
+.partido {
+	color: white;
+	background-color:transparent;
+	font-size: 120%;
+	margin: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
