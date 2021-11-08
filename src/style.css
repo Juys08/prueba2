@@ -194,7 +194,47 @@ background: linear-gradient(to right, yellowgreen, rgb(255, 10, 10));
 	margin-bottom: 20px;
 }
 
+.container1{
+	align-content: center;
+	display: flex;
+	
+	background-color: transparent;
+}
+.cuadros1{
+	background-color: transparent;
+	margin: 0;
+	text-decoration: none;
+	display:block;
+	align-items:center;
+	text-align: center;
+	
+}
+.antecuadro1{
+	background-color: rgb(60, 248, 96);
+	padding: 5px 5px;
+	height:50%;
+	margin: 10px 5px;
+	border-radius: 8px;
+}
 
+.cuadros1 h3 {
+	background-color: transparent;
+	color: black;
+	margin:0;
+}
+
+.titulo{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.container1 .antecuadro1 .cuadros1 img{
+	background-color: transparent;
+	width:60px;
+	height:60px;
+	margin: 0;
+	
+}
 
 
 
