@@ -5,6 +5,10 @@
 html{
     margin: 0 0 0 0;
 }
+body{
+	width: 100%;
+	margin: 0;
+}
 
 h2{ 
     color: #fff;  
@@ -197,8 +201,12 @@ background: linear-gradient(to right, yellowgreen, rgb(255, 10, 10));
 .container1{
 	align-content: center;
 	display: flex;
-	
+	flex-direction: row;
 	background-color: transparent;
+	overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+	width: 100%;
 }
 .cuadros1{
 	background-color: transparent;
@@ -207,14 +215,14 @@ background: linear-gradient(to right, yellowgreen, rgb(255, 10, 10));
 	display:block;
 	align-items:center;
 	text-align: center;
-	
+	width: 88px;
 }
 .antecuadro1{
 	background-color: rgb(60, 248, 96);
 	padding: 5px 5px;
 	height:50%;
 	margin: 10px 5px;
-	border-radius: 8px;
+	border-radius: 15px;
 }
 
 .cuadros1 h3 {
